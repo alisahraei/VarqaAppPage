@@ -2,17 +2,32 @@
 	box-sizing: border-box;
 }
 body{
-	background-color: darkslategrey;
+	background-color: #3e8584;
 	width           : 100vw;
 	height          : 100vh;
 	margin          : 0;
 	padding         : 0;
 }
 header{
+	background-color: darkslategrey;
 	position        : relative;
 	height          : 20%;
-	background-color: #3e8584;
 	border          : none;
-	border-radius: 0 0 2em 2em;
-	opacity: 0.9;
+	border-radius   : 0 0 2em 2em;
+	opacity         : 0.9;
+	width           : 100vw;
+}
+div.logo{
+	position: absolute;
+	top     : 0;
+	right   : 0;
+	height  : 20%;
+}
+div.logo img{
+	position: relative;
+	right   : 20px;
+	top     : 10px;
+	height  : 7em;
+	width   : 7em;
+	z-index : 1;
 }
