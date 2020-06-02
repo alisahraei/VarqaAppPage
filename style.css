@@ -1,5 +1,117 @@
+@font-face {
+  font-family: by;
+  src        : url(font/by.ttf);
+}
+@font-face {
+  font-family: t;
+  src        : url(font/t.ttf);
+}
+@font-face {
+  font-family: OpenSans;
+  src        : url(font/OpenSansCondensed-Light.ttf);
+}
+@font-face {
+  font-family: Ubuntu;
+  src        : url(font/Ubuntu-Light.ttf);
+}
+@keyframes pulse {
+	10%
+	{
+		opacity:.1;
+		transform:scale(1.5)
+	}
+	
+	50%
+	{
+		opacity:.2;
+		transform:scale(1.8)
+	}
+	
+	70%
+	{
+		opacity:.1;
+		transform:scale(1.5)
+	}
+	
+	100%
+	{
+		opacity:1;
+		transform:scale(1)
+	}
+}
+@keyframes fadein {
+	from
+	{
+		opacity:0
+	}
+	
+	to
+	{
+		opacity:1
+	}
+}
+@keyframes pulse-blur {
+	0%
+	{
+		opacity:0;
+		transform:translate(50%,-50%) scale(1.1);
+	}
+	
+	40%
+	{
+		opacity:1;
+	}
+	
+	100%
+	{
+		opacity:1;
+	}
+}
+@keyframes pulse-blur-desktop {
+	0%
+	{
+		opacity:0;
+		transform:translate(0,-50%) scale(0)
+	}
+	
+	40%
+	{
+		opacity:1
+	}
+	
+	100%
+	{
+		border-width:2px;
+		opacity:0;
+		transform:translate(0,-50%) scale(1.1)
+	}
+}
+@keyframes fadeInOut {
+	0%
+	{
+		opacity:0
+	}
+	
+	20%
+	{
+		opacity:1;
+		transform:translateY(-15px)
+	}
+	
+	80%
+	{
+		opacity:1;
+		transform:translateY(-15px)
+	}
+	
+	100%
+	{
+		opacity:0
+	}
+}
 *{
 	box-sizing: border-box;
+	font-family: Ubuntu, by, sans-serif;
 }
 body{
 	background-color: #3e8584;
@@ -32,6 +144,8 @@ div.logo img{
 	max-height: 112px;
 	max-width : 112px;
 	z-index   : 10000;
+	display   : block;
+	animation:pulse-blur 2s 1 ease-in-out;
 }
 section{
 	position  : absolute;
@@ -53,5 +167,26 @@ div.container{
 	left            : 50%;
 	transform       : translate(-50%, -50%);
 	box-shadow      : 0 1px 4px 0 rgba(0,0,0,0.27);
-	
+	padding         : 60px;
 }
+div.head{
+	color     : #3e8584;
+	font-size : 5em;
+	margin-top: 10px;
+	display   : block;
+}
+div.slogan{
+	color    : #35BFBD;
+	font-size: 2em;
+	display  : block;
+}
+div.phone{
+	background-image: url(image/test.png);
+	width           : 400px;
+	height          : 600px;
+	position        : absolute;
+	left            : 10%;
+	bottom          : 50%;
+	transform: translate(0, 50%);
+}
+@media 
