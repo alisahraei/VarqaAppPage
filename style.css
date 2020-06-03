@@ -21,25 +21,25 @@
 @keyframes pulse {
 	10%
 	{
-		opacity:.1;
+		opacity  :.1;
 		transform:scale(1.5)
 	}
 	
 	50%
 	{
-		opacity:.2;
+		opacity  :.2;
 		transform:scale(1.8)
 	}
 	
 	70%
 	{
-		opacity:.1;
+		opacity  :.1;
 		transform:scale(1.5)
 	}
 	
 	100%
 	{
-		opacity:1;
+		opacity  :1;
 		transform:scale(1)
 	}
 }
@@ -57,7 +57,7 @@
 @keyframes pulse-blur {
 	0%
 	{
-		opacity:0;
+		opacity  :0;
 		transform:translate(50%,-50%) scale(1.1);
 	}
 	
@@ -71,23 +71,33 @@
 		opacity:1;
 	}
 }
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 128, 128, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 128, 128, 0);
+     }
+}
 @keyframes pulse-blur-desktop {
 	0%
 	{
-		opacity:0;
-		transform:translate(0,-50%) scale(0)
+		opacity  :0;
+		transform:translate(0,50%) scale(0)
 	}
 	
 	40%
 	{
-		opacity:1
+		opacity  :0.5
+		transform:translate(0,50%) scale(1.5)
 	}
 	
 	100%
 	{
 		border-width:2px;
-		opacity:0;
-		transform:translate(0,-50%) scale(1.1)
+		opacity     :1;
+		transform   :translate(0,50%) scale(1)
 	}
 }
 @keyframes fadeInOut {
@@ -98,13 +108,13 @@
 	
 	20%
 	{
-		opacity:1;
+		opacity  :1;
 		transform:translateY(-15px)
 	}
 	
 	80%
 	{
-		opacity:1;
+		opacity  :1;
 		transform:translateY(-15px)
 	}
 	
@@ -114,8 +124,10 @@
 	}
 }
 *{
-	box-sizing: border-box;
+	box-sizing : border-box;
 	font-family: Ubuntu, by, OpenSans;
+	transition : 0.3s
+	;
 }
 body{
 	background-color: #008080;
@@ -142,14 +154,16 @@ div.logo{
 	height  : 20%;
 }
 div.logo img{
-	position  : absolute;
-	top       : 20px;
-	right     : 20px;
-	max-height: 112px;
-	max-width : 112px;
-	z-index   : 10000;
-	display   : block;
-	animation:pulse-blur 2s 1 ease-in-out;
+	position     : absolute;
+	top          : 20px;
+	right        : 20px;
+	max-height   : 112px;
+	max-width    : 112px;
+	z-index      : 10000;
+	display      : block;
+	margin       : 0;
+	border-radius: 50%;
+	animation    :pulse-blur 2s 1 ease-in-out, shadow-pulse 1.5s 2s infinite ease-in-out;
 }
 section{
 	position  : absolute;
@@ -173,16 +187,21 @@ div.container{
 	box-shadow      : 0 1px 4px 0 rgba(0,0,0,0.27);
 	padding         : 60px;
 }
+div.center{
+	align-items    : center;
+	justify-content: center;
+	text-align     : center;
+	width          : 40vw;
+	height         : auto;
+}
 div.head{
 	color     : #3e8584;
 	font-size : 5em;
 	margin-top: 10px;
-	display   : block;
 }
 div.slogan{
 	color    : #35BFBD;
 	font-size: 2em;
-	display  : block;
 }
 div.phone{
 	background-image : url(image/test.png);
@@ -194,17 +213,18 @@ div.phone{
 	transform        : translate(0, 50%);
 	background-repeat: no-repeat;
 	background-size  : cover;
+	animation        :pulse-blur-desktop 2s 1 ease-in-out;
 }
 div.link{
 	display: block;
-	margin: 50px 20px 20px 20px;
+	margin : 50px 20px 20px 20px;
 }
 a.botton{
 	text-decoration : none;
 	color           : #fff;
 	background-color: #008080;
 	border-radius   : 20px;
-	padding         : 1%;
+	padding         : 2%;
 	margin          :5px;	
 }
 @media 
