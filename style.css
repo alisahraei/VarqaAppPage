@@ -56,6 +56,35 @@
 }
 @keyframes pulse-blur {
 	0%
+	{	
+		top: 50%;
+		right: 50%;
+		opacity  :1;
+		transform:translate(50%,-50%) scale(5.1);
+	}
+	
+	
+	100%
+	{
+		visibility: visible;
+		opacity:1;
+	}
+}
+@keyframes view {
+	0%
+	{	
+		opacity: 0;
+	}
+	
+	
+	100%
+	{
+		visibility: visible;
+		opacity:1;
+	}
+}
+@keyframes pulse {
+	0%
 	{
 		opacity  :0;
 		transform:translate(50%,-50%) scale(1.1);
@@ -141,21 +170,15 @@ body{
 header{
 	background-color: darkslategrey;
 	position        : relative;
-	height          : 190px;
+	height          : 20vh;
 	border          : none;
 	border-radius   : 0 0 3em 3em;
 	opacity         : 0.9;
 	width           : 100vw;
 }
-div.logo{
-	position: absolute;
-	top     : 10px;
-	right   : 10px;
-	height  : 20%;
-}
 div.logo img{
 	position     : absolute;
-	top          : 20px;
+	top          : 30px;
 	right        : 20px;
 	max-height   : 112px;
 	max-width    : 112px;
@@ -163,7 +186,8 @@ div.logo img{
 	display      : block;
 	margin       : 0;
 	border-radius: 50%;
-	animation    :pulse-blur 2s 1 ease-in-out, shadow-pulse 1.5s 2s infinite ease-in-out;
+	/*visibility: hidden;*/
+	animation    :pulse-blur 3.5s 0.5s 1 ease-in-out, shadow-pulse 1.5s 4s infinite ease-in-out;
 }
 section{
 	position  : absolute;
@@ -188,6 +212,7 @@ div.container{
 	padding         : 60px;
 }
 div.center{
+	animation: view 2s 2s 1 ease-in-out;
 	align-items    : center;
 	justify-content: center;
 	text-align     : center;
@@ -213,7 +238,7 @@ div.phone{
 	transform        : translate(0, 50%);
 	background-repeat: no-repeat;
 	background-size  : cover;
-	animation        :pulse-blur-desktop 2s 1 ease-in-out;
+	animation        :pulse-blur-desktop 2s 3s 1 ease-in-out;
 }
 div.link{
 	display: block;
@@ -227,4 +252,9 @@ a.botton{
 	padding         : 2%;
 	margin          :5px;	
 }
+
+
+
+
+
 @media 
