@@ -83,23 +83,6 @@
 		opacity:1;
 	}
 }
-@keyframes pulse {
-	0%
-	{
-		opacity  :0;
-		transform:translate(50%,-50%) scale(1.1);
-	}
-	
-	40%
-	{
-		opacity:1;
-	}
-	
-	100%
-	{
-		opacity:1;
-	}
-}
 @keyframes shadow-pulse
 {
      0% {
@@ -115,42 +98,22 @@
 		opacity  :0;
 		transform:translate(0,50%) scale(0)
 	}
-	
-	40%
-	{
-		opacity  :0.5
-		transform:translate(0,50%) scale(1.5)
-	}
-	
 	100%
 	{
 		border-width:2px;
 		opacity     :1;
 		transform   :translate(0,50%) scale(1)
+		visibility  : visible;
 	}
 }
-@keyframes fadeInOut {
-	0%
-	{
-		opacity:0
-	}
-	
-	20%
-	{
-		opacity  :1;
-		transform:translateY(-15px)
-	}
-	
-	80%
-	{
-		opacity  :1;
-		transform:translateY(-15px)
-	}
-	
-	100%
-	{
-		opacity:0
-	}
+@keyframes example {
+  0%   {
+    transform        : translate(0%, 70%);opacity: 0;
+    }
+  100% {
+    transform        : translate(50%, 7%);opacity: 1;
+    visibility       : visible;
+    }
 }
 *{
 	box-sizing : border-box;
@@ -186,8 +149,9 @@ div.logo img{
 	display      : block;
 	margin       : 0;
 	border-radius: 50%;
-	/*visibility: hidden;*/
-	animation    :pulse-blur 3.5s 0.5s 1 ease-in-out, shadow-pulse 1.5s 4s infinite ease-in-out;
+	visibility   : hidden;
+	animation    : 3s ease-in-out 0.5s normal forwards 1 pulse-blur, 1.5s ease-in-out 4s normal forwards infinite shadow-pulse ;
+
 }
 section{
 	position  : absolute;
@@ -212,12 +176,16 @@ div.container{
 	padding         : 60px;
 }
 div.center{
-	animation: view 2s 2s 1 ease-in-out;
+	animation      : 1s ease 3s normal forwards 1 view;
+	visibility     : hidden;
 	align-items    : center;
 	justify-content: center;
 	text-align     : center;
 	width          : 40vw;
-	height         : auto;
+	height         : 100vh;
+	position       : absolute;
+	top            : 50%;
+	transform      : translate(0, -17%);
 }
 div.head{
 	color     : #3e8584;
@@ -228,22 +196,36 @@ div.slogan{
 	color    : #35BFBD;
 	font-size: 2em;
 }
+div.anime{
+
+}
 div.phone{
-	background-image : url(image/test.png);
-	width            : 40vh;
+	animation : 3.5s ease 3s normal forwards 1 pulse-blur-desktop;
+	/*visibility: hidden;*/
+	background-image : url(image/phone.jpg);
+	width            : 34vh;
 	height           : 70vh;
 	position         : absolute;
-	left             : 10%;
+	left             : 12%;
 	bottom           : 50%;
 	transform        : translate(0, 50%);
 	background-repeat: no-repeat;
 	background-size  : cover;
-	animation        :pulse-blur-desktop 2s 3s 1 ease-in-out;
+	border-radius    : 20px;
 }
 div.link{
-	display: block;
-	margin : 50px 20px 20px 20px;
+	display   : block;
+	margin    : 50px 20px 20px 20px;
+	visibility: hidden;
 }
+#delay1{
+	animation      : 1s ease 4s normal forwards 1 example;
+
+}
+#delay2{
+	animation      : 1s ease 4.5s normal forwards 1 example;
+}
+
 a.botton{
 	text-decoration : none;
 	color           : #fff;
