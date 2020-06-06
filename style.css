@@ -95,15 +95,20 @@
 @keyframes pulse-blur-desktop {
 	0%
 	{
-		opacity  :0;
-		transform:translate(0,50%) scale(0)
+		opacity   :0;
+		transform :translate(0,50%) scale(0);
 		visibility: visible;
+	}
+	70%
+	{
+		opacity: 1;
+		transform: translate(0,50%) scale(1.05);
 	}
 	100%
 	{
-		border-width:2px;
-		opacity     :1;
-		transform   :translate(0,50%) scale(1)
+		border-width: 2px;
+		transform   : translate(0,50%) scale(1);
+		opacity     : 1;
 		visibility  : visible;
 	}
 }
@@ -201,7 +206,7 @@ div.anime{
 
 }
 div.phone img{
-	animation : 3.5s ease 3s normal forwards 1 pulse-blur-desktop;
+	animation : 2s linear 3s normal forwards 1 pulse-blur-desktop;
 	visibility: hidden;
 	/*background-image : url(image/phone.jpg);*/
 	width            : 34vh;
