@@ -75,8 +75,6 @@
 	{	
 		opacity: 0;
 	}
-	
-	
 	100%
 	{
 		visibility: visible;
@@ -99,7 +97,7 @@
 		transform :translate(0,50%) scale(0);
 		visibility: visible;
 	}
-	80%
+	95%
 	{
 		opacity: 1;
 		transform: translate(0,50%) scale(1.05);
@@ -206,7 +204,7 @@ div.anime{
 
 }
 div.phone img{
-	animation         : 2s linear 3s normal forwards 1 pulse-blur-desktop;
+	animation         : 1.5s linear 3s normal forwards 1 pulse-blur-desktop;
 	visibility        : hidden;
 	/*background-image: url(image/phone.jpg);*/
 	width             : 34vh;
