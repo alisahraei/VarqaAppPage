@@ -219,15 +219,17 @@ div.phone img{
 }
 div.link{
 	display   : block;
-	margin    : 50px 20px 20px 20px;
+	margin    : 15px 20px 20px 20px;
 	visibility: hidden;
 }
 .delay1{
-	animation      : 1s ease 4s normal forwards 1 example;
+	animation: 1s ease 4s normal forwards 1 example;
+	right    : 41.5%;
 
 }
 .delay2{
-	animation      : 1s ease 4.5s normal forwards 1 example;
+	animation: 1s ease 4.5s normal forwards 1 example;
+	right    : 57.5%;
 }
 
 a.botton{
@@ -235,10 +237,13 @@ a.botton{
 	color           : #fff;
 	background-color: #008080;
 	border-radius   : 20px;
-	padding         : 2%;
+	padding         : 1.5%;
 	margin          :5px;	
+	position        : absolute;
 }
-
+#myBtn{
+	cursor: pointer;
+}
 .modal {
 	display         : none;
 	position        : fixed;
