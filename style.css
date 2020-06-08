@@ -97,11 +97,11 @@
 		transform :translate(0,50%) scale(0);
 		visibility: visible;
 	}
-	95%
+	/*95%
 	{
 		opacity: 1;
 		transform: translate(0,50%) scale(1.05);
-	}
+	}*/
 	100%
 	{
 		border-width: 2px;
@@ -264,6 +264,7 @@ a.botton{
 	padding         : 20px;
 	border          : 1px solid #888;
 	width           : 40%;
+	box-shadow      : 0 0 26px 1px rgba(0,0,0,.9);
 }
 .close {
 	color      : #aaaaaa;
